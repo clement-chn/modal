@@ -9,11 +9,35 @@ body {
   font-family: "Albert Sans", sans-serif;
 }
 
+.hide-modal {
+  display: none;
+}
+
 .modal {
   z-index: 2;
   height: 200px;
-  width: 380px;
-  background-color: red;
+  width: 430px;
+  background-color: white;
+  .close-btn {
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin: 15px 15px 0 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .modal-contenu {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      font-size: 2rem;
+      margin-left: 35px;
+    }
+  }
 }
 
 main {
@@ -54,8 +78,22 @@ main {
 
 /* Ordinateurs */
 
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 10rem;
+@media screen and (min-width: 1024px) {
+  main {
+    .modal-container {
+      width: 450px;
+      height: 230px;
+      h1 {
+        font-size: 3.2rem;
+      }
+      .open {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .modal {
+    width: 510px;
+    height: 250px;
   }
 }
